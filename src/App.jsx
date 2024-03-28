@@ -5,6 +5,11 @@ import { ReactTabulator} from "react-tabulator";
 
 export default function App() {
   
+ const options = {
+  pagination: 'remote', // or 'local'
+  paginationSize: 10, // number of rows per page
+};
+
   const columns = [
     { title: "Name", field: "name" },
     { title: "Age", field: "age" },
@@ -149,6 +154,7 @@ export default function App() {
       <ReactTabulator
         data={data}
         columns={columns}
+        options={options}
       />
     </>
   );
