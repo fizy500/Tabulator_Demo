@@ -1,21 +1,41 @@
 import "./App.css";
 import "react-tabulator/css/tabulator.min.css";
-import { ReactTabulator} from "react-tabulator";
+import { ReactTabulator } from "react-tabulator";
 
 export default function App() {
-  
   const columns = [
-    { title: "Name", field: "name" },
-    { title: "Age", field: "age" },
-    { title: "Country", field: "country" },
-  ]; 
+    {
+      title: "Name",
+      field: "name",
+      headerFilter: "input",
+      headerFilterPlaceholder: "Search by Name",
+      headerFilterFunc: "like",
+      headerFilterLiveFilter: true,
+    },
+    {
+      title: "Age",
+      field: "age",
+      headerFilter: "input",
+      headerFilterPlaceholder: "Search by Name",
+      headerFilterFunc: "like",
+      headerFilterLiveFilter: true,
+    },
+    {
+      title: "Country",
+      field: "country",
+      headerFilter: "input",
+      headerFilterPlaceholder: "Search by Name",
+      headerFilterFunc: "like",
+      headerFilterLiveFilter: true,
+    },
+  ];
 
   let data = [
     { id: 1, name: "Adewale Kunle", age: "31", country: "Nigeria" },
     { id: 2, name: "Mary Smith", age: "1", country: "Peru" },
     {
       id: 3,
-      name: "Leopold Vicktor",  
+      name: "Leopold Vicktor",
       age: "24",
       country: "Romania",
     },
@@ -141,17 +161,10 @@ export default function App() {
     },
   ];
 
-
-
-
-  
   return (
     <>
       <h1 className='Demo_header'>Tabulator Demo</h1>
-      <ReactTabulator
-        data={data}
-        columns={columns}
-      />
+      <ReactTabulator data={data} columns={columns} />
     </>
   );
 }
