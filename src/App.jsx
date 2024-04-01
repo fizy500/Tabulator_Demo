@@ -1,4 +1,3 @@
-// import React from 'react';
 import "./App.css";
 import "react-tabulator/css/tabulator.min.css";
 import { ReactTabulator} from "react-tabulator";
@@ -143,6 +142,9 @@ export default function App() {
   ];
 
 
+
+
+  
   return (
     <>
       <h1 className='Demo_header'>Tabulator Demo</h1>
